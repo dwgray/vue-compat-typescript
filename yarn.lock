@@ -2328,7 +2328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compat@npm:^3.1.0":
+"@vue/compat@npm:3.2.47":
   version: 3.2.47
   resolution: "@vue/compat@npm:3.2.47"
   dependencies:
@@ -2338,6 +2338,19 @@ __metadata:
   peerDependencies:
     vue: 3.2.47
   checksum: 3bd7bf6900ac34fa3caf076dd077d7e859f2b20373f5a50fdd174005bc81d40d1d262f63c25192e9920e4fff0668ac6f39f72b235f5ef973add7516148c1d7b5
+  languageName: node
+  linkType: hard
+
+"@vue/compat@patch:@vue/compat@npm%3A3.2.47#./.yarn/patches/@vue-compat-npm-3.2.47-ca3a79b2ab.patch::locator=vue-compat-typescript%40workspace%3A.":
+  version: 3.2.47
+  resolution: "@vue/compat@patch:@vue/compat@npm%3A3.2.47#./.yarn/patches/@vue-compat-npm-3.2.47-ca3a79b2ab.patch::version=3.2.47&hash=d49353&locator=vue-compat-typescript%40workspace%3A."
+  dependencies:
+    "@babel/parser": ^7.16.4
+    estree-walker: ^2.0.2
+    source-map: ^0.6.1
+  peerDependencies:
+    vue: 3.2.47
+  checksum: d34789917778470ccbe566643dac475ddbbfcdb2146a5613dc83ea2a99d1053ded132342c3c4d0cce184af9cf1e938ce0d36a82d85056362174215477587dae7
   languageName: node
   linkType: hard
 

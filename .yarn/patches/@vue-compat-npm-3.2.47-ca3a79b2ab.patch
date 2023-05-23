@@ -1,0 +1,22 @@
+diff --git a/dist/vue.runtime.esm-bundler.js b/dist/vue.runtime.esm-bundler.js
+index 60904677842363029c655aaa3c012bc48bd3d0d0..8ce689b73b0211610d05a2943a79cffe07a061d5 100644
+--- a/dist/vue.runtime.esm-bundler.js
++++ b/dist/vue.runtime.esm-bundler.js
+@@ -9967,7 +9967,16 @@ function convertLegacyComponent(comp, instance) {
+     }
+     // 2.x constructor
+     if (isFunction(comp) && comp.cid) {
+-        comp = comp.options;
++	  // #7766
++	  if (comp.render) {
++	    // only necessary when compiled from SFC
++	    comp.options.render = comp.render
++	  }
++	  // copy over internal properties set by the SFC compiler
++	  comp.options.__file = comp.__file
++	  comp.options.__hmrId = comp.__hmrId
++	  comp.options.__scopeId = comp.__scopeId
++	  comp = comp.options
+     }
+     // 2.x async component
+     if (isFunction(comp) &&
